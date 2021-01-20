@@ -1,0 +1,28 @@
+delete /movies
+delete /ratings
+
+PUT movies
+{
+  "settings": {
+    "index" : {
+        "similarity" : {
+          "default" : {
+            "type" : "BM25"
+          }
+        }
+    }
+  }
+}
+
+PUT ratings
+{
+  "settings": {
+    "index" : {
+        "similarity" : {
+          "default" : {
+            "type" : "BM25"
+          }
+        }
+    }
+  }
+}
